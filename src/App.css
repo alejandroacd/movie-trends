@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+    margin-top:3em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form h1 {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form input {
+    width: 20%;
+    padding:0.3em
 }
 
-.App-link {
-  color: #61dafb;
+form button {
+    font-weight: bold ;
+    padding:0.3em;
+    margin:1em;
+    width: 20%;
+    background-color: black;
+    color:white;
+}
+ul li {
+    font-size:1.3em;
+    text-decoration: none;
+    list-style: none;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.league-container {
+    padding-top:3em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+a:visited {
+    color:#fafafa
+}
+
+
+
+.card:hover {
+    background-color: #030303;
+    color:#fafafa;
+    opacity: 0.9;
+    transition: 0.5s
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    height: 80vh;
+}
+
+
+.description-genres {
+
+    padding:3em;
+    margin-top: 3em
+}
+
+.header_info a:hover, nav ul a:hover, nav ul a li:hover {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+
+
+.image-detail {
+    width: 400px;
+    height: 350px
+}
+
+.card {
+    height: auto;
+}
+
+
+.description-genres p {
+
+    font-size: 1em;;
+}
+
+.heart-icon-div {
+    position: absolute;
+    width: 100%;
+    padding:0.5em;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
 }
