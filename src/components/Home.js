@@ -15,7 +15,7 @@ const Login = (props) => {
   }
 
   useEffect(() => {
-    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`)
+    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=675fd4fbd8ad300309a50cc95ffc2b27`)
     .then(res =>{
       setMovies(res.data.results)
       console.log(res.data.results)
