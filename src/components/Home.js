@@ -9,8 +9,6 @@ const Login = (props) => {
   const [search, setSearch] = useState('')
   const inputRef = useRef()
 
-
-
   const handleSearch = () => {
     
     setSearch(inputRef.current.value)
@@ -28,7 +26,7 @@ const Login = (props) => {
 
   },[])
 
-  const finalValues =  movies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
+  const finalValues = movies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
 
   return (
   <>
@@ -39,7 +37,6 @@ const Login = (props) => {
   <div>
     <form>
       <input type='text' className='input-search' ref={inputRef} placeholder="Search a movie..." onChange={() => handleSearch()} autoFocus/>
-  
     </form>
   </div>
 
@@ -47,7 +44,7 @@ const Login = (props) => {
 {finalValues.map((x,y) => {
     return (
       <div className="col-sm-12 col-lg-3 col-xs-12" key={y}>
-         <MovieCard name={x.title} description={x.overview} image={x.backdrop_path} id={x.id} cart={props.cart} handleChanger={props.handleChange} />
+         <MovieCard  name={x.title} description={x.overview} image={x.backdrop_path} id={x.id} cart={props.cart} handleChanger={props.handleChange} />
       </div>
      
     )

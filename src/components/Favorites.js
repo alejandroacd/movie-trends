@@ -14,8 +14,12 @@ const Favorites = (props) => {
         {props.cart.length === 0 && null}
         {props.cart.length > 0 && 
 
+
+     <>
+
+<h3 className="text-center p-5 font-weight-bold">Favorites</h3>
         
-        props.cart.map((x,y) => {
+        {props.cart.map((x,y) => {
             return (
                 <div key={y} className="card border-0 d-flex flex-lg-row flex-md-row flex-sm-column">
                 <img  src={`https://image.tmdb.org/t/p/w500/${x.image}`} className="favorite-image" alt="..." />
@@ -30,8 +34,12 @@ const Favorites = (props) => {
             )
             
         })
+    }
+        </>
         
         }
+
+       
         
         </>
       

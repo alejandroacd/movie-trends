@@ -30,7 +30,7 @@ const LeagueCard = (props) => {
         <div className="card-body">
           <h5 className="card-title"> {props.name.substring(0, 20)}... </h5>
           <p className="card-text">  {props.description.substring(0, 100)} ... </p>
-          <Link to={`/movies/?id=${props.id}`} className='btn btn-success' > See details</Link>
+          <Link to={`/movies/?id=${props.id}`} className='btn btn-success pt-2 pb-1 p-2' > See details </Link>
         </div>
       </div>
     </>
