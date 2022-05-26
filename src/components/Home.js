@@ -1,6 +1,6 @@
 import React, {useRef,useState,useEffect} from 'react'
 import axios from 'axios'
-import LeagueCard  from './LeagueCard'
+import MovieCard from './MovieCard'
 
 const Login = (props) => {
 
@@ -17,7 +17,6 @@ const Login = (props) => {
   }
 
   useEffect(() => {
-    console.log(props)
     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`)
     .then(res =>{
       setMovies(res.data.results)
@@ -39,7 +38,7 @@ const Login = (props) => {
   <>
   <div>
     <form>
-      <input type='text' ref={inputRef} placeholder="Buscar película" onChange={() => handleSearch()} autoFocus/>
+      <input type='text' className='input-search' ref={inputRef} placeholder="Search a movie..." onChange={() => handleSearch()} autoFocus/>
   
     </form>
   </div>
@@ -47,8 +46,8 @@ const Login = (props) => {
 <div className='league-container'>
 {finalValues.map((x,y) => {
     return (
-      <div className='col-3' key={y}>
-         <LeagueCard name={x.title} description={x.overview} image={x.backdrop_path} id={x.id} cart={props.cart} handleChanger={props.handleChange} />
+      <div className="col-sm-12 col-lg-3 col-xs-12" key={y}>
+         <MovieCard name={x.title} description={x.overview} image={x.backdrop_path} id={x.id} cart={props.cart} handleChanger={props.handleChange} />
       </div>
      
     )

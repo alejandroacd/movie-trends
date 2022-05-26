@@ -1,11 +1,11 @@
 import './App.css';
-import Login from './components/Login'
+import Home from './components/Home'
 import Header from './components/Header'
 import '../src/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MovieDetail from './components/movieDetail';
 import Favorites from './components/Favorites'
-import { useEffect,useState } from 'react';
+import { useState } from 'react';
 
 function App() {
 
@@ -45,7 +45,7 @@ const [cart,setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
 
         <Header />
         <Routes>
-          <Route exact path='/' element={<Login cart={cart}  handleChange={handleChanger}  />} ></Route>
+          <Route exact path='/' element={<Home cart={cart}  handleChange={handleChanger}  />} ></Route>
           <Route exact path="/movies/" element={<MovieDetail />} ></Route>
           <Route exact path='/favorites' element={<Favorites cart={cart} handleChange={handleChanger} />} ></Route>
         </Routes>

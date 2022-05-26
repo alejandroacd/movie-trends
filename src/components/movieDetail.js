@@ -44,7 +44,7 @@ const MovieDetail = () => {
                         {movieDetails.overview}
                     </p>
                    <h2>
-                       genres:
+                       Genres:
                    </h2>
                    <ul>
                        {movieDetails.genres ? 
