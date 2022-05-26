@@ -29,11 +29,19 @@
     height: 100%;
    
 }
+
+a:visited {
+    color:#f4f4f4;
+}
 .header_info .list-container {
     display: flex;
     justify-content: center;
   
 
+}
+
+a {
+    color:red;
 }
 
 .header_info .list-container ul {
