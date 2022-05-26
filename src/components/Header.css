@@ -40,10 +40,6 @@ a:visited {
 
 }
 
-a {
-    color:red;
-}
-
 .header_info .list-container ul {
     display: flex;
     list-style: none;

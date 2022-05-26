@@ -15,7 +15,7 @@ const Header = () => {
             <nav className='list-container d-none d-lg-flex'>
                 <ul>
                 
-                    <Link style={{textDecoration: 'none'}}  to="/favorites">
+                    <Link  className="text-white" style={{textDecoration: 'none'}}  to="/favorites">
                     <li>
                         Favorites <BiStar />
                     </li>
