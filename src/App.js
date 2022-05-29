@@ -43,7 +43,7 @@ const [cart,setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
     <>
       <BrowserRouter>
 
-        <Header />
+        <Header cart={cart} />
         <Routes>
           <Route exact path='/' element={<Home cart={cart}  handleChange={handleChanger}  />} ></Route>
           <Route exact path="/movies/" element={<MovieDetail />} ></Route>

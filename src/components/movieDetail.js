@@ -17,6 +17,7 @@ const MovieDetail = () => {
             .then(res => {
                 console.log(res.data)
                 setMovieDetails(res.data)
+                console.log(res.data.genres)
             })
             .catch(e => {
                 console.log(e)
@@ -29,35 +30,36 @@ const MovieDetail = () => {
         {!movieDetails && <h1> Cargando... </h1> }
 
         {movieDetails && 
-        <>
-        <div className="container">
+        
+        <div className="movie-details">
+            <h3 className="title-movie"> {movieDetails.title} </h3>
+
+            <div className="row information">
+                <img className="col-sm-12 col-md-6 col-lg-6 detail-image"src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`} />
+                <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column">
+               
+               
+                <p className="font-weight-bold mt-4"> Description: </p>
+                <p> {movieDetails.overview} </p>
+                <p className="font-weight-bold"> IMDB Rate: </p>
+                <p> {movieDetails.vote_average} </p>
+                <p className="font-weight-bold">Homepage: </p> 
+                <a href={movieDetails.homepage}> {movieDetails.homepage} </a>
+                <br/>
+                <p className="font-weight-bold genres"> Genres: <br/>
+               
+                {movieDetails.genres ? movieDetails.genres.map(x => {
+                        return (
+                            <div className="btn btn-info m-1"> {x.name}</div>
+                        )
+                    }) : null }
             
-                <div className="title-image d-flex flex-column">
-                <h1 className="mb-5 text-center">
-                  {movieDetails.title}
-                </h1>
-                <img className="image-detail" src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}  />
+                 </p> 
                 </div>
-
-                <div className="description-genres d-flex justify-content-center align-items-center  flex-column">
-                    <p className="d-flex">
-                        {movieDetails.overview}
-                    </p>
-                   <h2>
-                       Genres:
-                   </h2>
-                   <ul>
-                       {movieDetails.genres ? 
-                       movieDetails.genres.map(x => <li> {x.name} </li>)
-                       :
-                       null}
-                   </ul>
-                </div>
-             
-       
             </div>
+        </div>
 
-        </>}
+        }
             
         </>
     )

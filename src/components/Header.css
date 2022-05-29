@@ -1,7 +1,7 @@
 .container-header {
     width: 100%;
     height: 15vh;
-    background-color: #5963bb;
+    background-color: #282846;
     color:#f4f4f4;
     display: flex;
     align-content: center;
@@ -30,9 +30,15 @@
    
 }
 
-a:visited {
+.favorites-link, .logo {
     color:#f4f4f4;
 }
+
+.favorites-link:visited {
+    color:#f4f4f4
+}
+
+
 .header_info .list-container {
     display: flex;
     justify-content: center;

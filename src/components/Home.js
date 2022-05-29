@@ -31,6 +31,8 @@ const Login = (props) => {
   return (
   <>
 
+  <h3 className='text-center mt-5 display-4'>Search some trend movie and add to favorites!</h3>
+
   {loading && <h3 className='text-center text-body d-flex justify-content-center align-items-center' style={{height:'50vh'}}> Cargando info... </h3> }
   {movies && 
   <>
