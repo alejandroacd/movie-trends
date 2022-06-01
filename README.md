@@ -16,4 +16,4 @@ The information is extracted from an API (TheMovieDB) through Axios. The add to 
 
 ## Demo
 
-movietrends-project.netlify.app
+https://movietrends-project.netlify.app
