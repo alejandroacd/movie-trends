@@ -14,3 +14,6 @@ This project was made for practical purposes, especially the state management be
 The information is extracted from an API (TheMovieDB) through Axios. The add to favorites functionality was coded using localStorage.
 
 
+## Demo
+
+movietrends-project.netlify.app
